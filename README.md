@@ -3,8 +3,8 @@
 _This is a tool that logs information for system load analisys.
 It's made of 2 services:_
 
-*_First service write every 10s a new line into /tmp/activity-load/temp.log, containing a timestamp, system load, available memory and top 10 process order by cpu usage_ 
-*_Second service copy this file to a non volatile path place in /var/log/activityload every 10 minutes appending a timestamp to the filename and removing the temporal info in /tmp/_
+* _First service write every 10s a new line into /tmp/activity-load/temp.log, containing a timestamp, system load, available memory and top 10 process order by cpu usage_ 
+* _Second service copy this file to a non volatile path place in /var/log/activityload every 10 minutes appending a timestamp to the filename and removing the temporal info in /tmp/_
 
 _Each service consist of 2 units placed in /usr/lib/systemd/system/ (a .service and a .timer unit) and a corresponding executable script in /usr/bin/_
 
