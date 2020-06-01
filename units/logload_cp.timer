@@ -1,0 +1,11 @@
+[Unit]
+Description=Timer for copying load data to non volatile file
+PartOf=logload.timer
+
+[Timer]
+OnCalendar=*-*-* *:0/10:5
+AccuracySec=1s
+
+[Install]
+WantedBy=timers.target
+

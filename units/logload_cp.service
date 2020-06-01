@@ -1,0 +1,7 @@
+[Unit]
+Description=copying logged data to a non volatile path
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh /usr/bin/log-load-cp-to-var.sh
+

@@ -1,0 +1,10 @@
+[Unit]
+Description=Timer for logging load data
+Wants=logload_cp.timer
+
+[Timer]
+OnCalendar=*-*-* *:*:0/10
+AccuracySec=1s
+
+[Install]
+WantedBy=timers.target

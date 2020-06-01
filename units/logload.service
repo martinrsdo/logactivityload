@@ -1,0 +1,8 @@
+[Unit]
+Description=logging data for system load analisys to tmp
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh /usr/bin/log-load-to-tmp.sh
+
+
