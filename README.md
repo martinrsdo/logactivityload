@@ -1,14 +1,14 @@
 # Process and Load logger using systemd and shell scripting
 
-_This is a tool that logs information for system load analisys.
+_This is a tool that logs information for system load analysis.
 It's made of 2 services:_
 
-* _First service write every 10s a new line into /tmp/activity-load/temp.log, containing a timestamp, system load, available memory and top 10 process order by cpu usage_ 
-* _Second service copy this file to a non volatile path place in /var/log/activityload every 10 minutes appending a timestamp to the filename and removing the temporal info in /tmp/_
+* _First service writes every 10s a new line into /tmp/activity-load/temp.log, containing a timestamp, system load, available memory and top 10 process order by cpu usage_ 
+* _Second service copies this file to a non volatile path place in /var/log/activityload every 10 minutes appending a timestamp to the filename and removing the temporal info in /tmp/_
 
-_Each service consist of 2 units placed in /usr/lib/systemd/system/ (a .service and a .timer unit) and a corresponding executable script in /usr/bin/_
+_Each service consists of 2 units placed in /usr/lib/systemd/system/ (a .service and a .timer unit) and a corresponding executable script in /usr/bin/_
 
-_Files created in the non volatile path have comma separated values for easy import and analisys, columns of these files are:_
+_Files created in the non volatile path have comma separated values for easy import and analysis, columns of these files are:_
 
 1. _Timestamp for this row using ISO8601 format YYYYMMDDTHHMMSS_
 2. _System load, the average for the last minute as provided in /proc/loadavg_
